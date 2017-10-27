@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="scoreboard.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>
+    Import FlashCard Text Below:
+    </h2>
+
+    <div class="input_fields_wrap">
+        <button class="add_field_button">Add More Flash Cards</button>
+      <button class="create_flashCards">create FlashCards</button>
+        <div>
+        <input placeholder="Question" type="text" name="mytext[]">
+        <input placeholder="Answer" type="text" name="mytext[]"/>
+    </div>
+    </div>
+    <hr>
+
+    <p id='reset'>
+      <button align="center">Reset stack</button>
+    </p>
+    <div id='stack'>
+      <div class='card _1'>
+        <div class='front'>
+          <p>What is 1+3?</p>
+        </div>
+        <div class='back'>
+          <p>4</p>
+        </div>
+      </div>
+      <div class='card _2'>
+        <div class='front'>
+          <p>What is 2-1?</p>
+        </div>
+        <div class='back'>
+          <p>1</p>
+        </div>
+      </div>
+      <div class='card _3'>
+        <div class='front'>
+          <p>What is Pi?</p>
+        </div>
+        <div class='back'>
+          <p>3.14...</p>
+        </div>
+      </div>
+      <div class='card _4'>
+        <div class='front'>
+          <p>What is 1/2?</p>
+        </div>
+        <div class='back'>
+          <p>0.5</p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

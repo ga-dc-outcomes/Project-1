@@ -1,0 +1,111 @@
+body {
+  background: #ccc;
+  font-family: Indie Flower, sans-serif;
+}
+
+#reset {
+  text-align: center;
+}
+#reset button {
+  background: rgba(0, 0, 0, 0.4);
+  border: 0;
+  color: white;
+  font-size: 12pt;
+  margin: auto;
+  width: 120px;
+  height: 30px;
+}
+#reset button:active {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#stack {
+  margin: auto;
+  position: relative;
+  width: 300px;
+}
+
+.card {
+  border: 1px solid #888;
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  transform-origin: 0% 0%;
+}
+.card .front {
+  background: white;
+  font-size: 24pt;
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  z-index: 2;
+}
+.card .front p {
+  line-height: 3em;
+  text-align: center;
+}
+.card .back {
+  background: white linear-gradient(transparent, transparent 20%, hotpink 20%, hotpink 21%, transparent 21%, transparent 31%, lightblue 31%, lightblue 32%, transparent 32%, transparent 42%, lightblue 42%, lightblue 43%, transparent 43%, transparent 53%, lightblue 53%, lightblue 54%, transparent 54%, transparent 64%, lightblue 64%, lightblue 65%, transparent 65%, transparent 75%, lightblue 75%, lightblue 76%, transparent 76%, transparent 86%, lightblue 86%, lightblue 87%, transparent 87%, transparent 97%);
+  font-size: 11pt;
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.card .back p {
+  margin: 40px 5px 5px 5px;
+}
+
+._1 {
+  top: 0px;
+  right: 0px;
+  z-index: 3;
+}
+
+._2 {
+  top: 3px;
+  right: 2px;
+  z-index: 2;
+}
+
+._3 {
+  top: 6px;
+  right: 4px;
+  z-index: 1;
+}
+
+._4 {
+  top: 9px;
+  right: 6px;
+  z-index: 0;
+}
+
+.flipped {
+  transform: rotateY(180deg) translateX(30px);
+  animation: flip 1s;
+}
+
+.showingBack {
+  animation: showBack 1s;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg) translateX(0px);
+  }
+  to {
+    transform: rotateY(180deg) translateX(30px);
+  }
+}
+@keyframes showBack {
+  0% {
+    z-index: 2;
+  }
+  25% {
+    z-index: 2;
+  }
+  50% {
+    z-index: 0;
+  }
+}
